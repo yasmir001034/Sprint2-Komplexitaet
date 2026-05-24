@@ -1,24 +1,25 @@
-public class Beispiel {
+public class BluetoothTest {
 
-    public static void beispiel(int x) {
+    public static void bluetoothTest() {
 
-        while (x < 10) { // Knoten 2
-            x++;
+        restartMPD();
+
+        setBluetoothOutput();
+
+        clearPlaylist();
+
+        addSong();
+
+        playSong();
+
+        boolean tonHoerbar = speakerTest();
+
+        if (tonHoerbar) {
+            System.out.println("Bluetooth funktioniert");
+        } else {
+            System.out.println("Audio-Routing prüfen");
         }
-
-        switch (x) { // Knoten 3
-
-            case 10: // Knoten 4
-                System.out.println("A");
-                break;
-
-            case 11: // Knoten 5
-                System.out.println("B");
-                break;
-
-            default: // Knoten 6
-                System.out.println("C");
-                break;
-        }
+    }
+}
     }
 }
